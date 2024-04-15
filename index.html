@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Meso Tours</title>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navId">
 
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand text-body" href="#">MESO TOURS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Packages</a>
+            <a class="nav-link active" href="#" aria-current="page">Packages</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">FAQ</a>
@@ -50,12 +50,11 @@
               <div class="col">
                 <div class="form-floating">
                   <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected>Madrid</option>
+                    <option value="1">Amsterdam</option>
+                    <option disabled value="2">Rome (fully booked)</option>
                   </select>
-                  <label for="floatingSelect">Works with selects</label>
+                  <label for="floatingSelect">Choose a tour</label>
                 </div>
               </div>
             </div>
@@ -117,7 +116,7 @@
         <p><i class="bi bi-airplane-fill me-2"></i>3 amazing destinations</p>
       </div>
       <div class="col text-center">
-        <p><i class="bi bi-credit-card-fill me-2"></i>Only pay 10% upfront</p>
+        <p><i class="bi bi-credit-card-fill me-2"></i>Choose between deposit options</p>
       </div>
       <div class="col text-center">
         <p><i class="bi bi-award-fill me-2"></i>Thousands of customers</p>
@@ -127,86 +126,98 @@
 
   <section class="c-cards-container mb-5">
     <div class="container">
-      <h5 class="text-center mb-5">Packages</h5>
+      <h3 class="text-center mb-5">Packages</h3>
       <div class="row text-center">
         <div class="col">
           <div class="card" >
-            <img src="./img/card-img-1.avif" class="card-img-top" alt="...">
+            <img src="./img/madrid.jpg" class="card-img-top" alt="View of Madrid">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Madrid</h5>
+              <p class="card-text">Madrid has excellent art museums, phenomenal food, enormous parks and Europe’s largest palace, but its inclusive atmosphere is what really makes the city soar.</p>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book this tour</a>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card" >
-            <img src="./img/card-img-2.avif" class="card-img-top" alt="...">
+            <img src="./img/Overview-Amsterdam.webp" class="card-img-top" alt="Bicycles on a bridge in Amsterdam">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Amsterdam</h5>
+              <p class="card-text">Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's treasure-packed museums, vintage-filled shops and hyper-creative drinking, dining and design scenes.</p>
+              <a href="#" class="btn btn-primary position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Book this tour <span class="position-absolute top-0 start-100 translate-middle badge text-bg-secondary">New</span>
+              </a>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card" >
-            <img src="./img/card-img-3.avif" class="card-img-top" alt="...">
+            <img src="./img/roma.webp" class="card-img-top" alt="Rome Colosseum">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Rome</h5>
+              <p class="card-text">A heady mix of haunting ruins, awe-inspiring art and vibrant street life, Italy's hot-blooded capital is one of the world's most romantic and charismatic cities.</p>
+              <button type="button" class="btn btn-primary position-relative" id="liveAlertBtn">Book this tour <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger">Full</span></button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div id="liveAlertPlaceholder"></div>
   </section>
-
+  
   <section class="c-faq">
     <div class="container">
-      <h5 class="text-center mb-5">FAQ</h5>
+      <h3 class="text-center mb-5">FAQ</h3>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Accordion Item #1
+              Do I have to pay you upfront for my vacation?
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              No! The deposit requirements are set by the resorts and the tour operators we book through. Deposit rates vary based on the resort or package you select, and the time you are traveling.  
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
+              Will I pay more for vacation if I book through you than an online booking site?
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              No. We have access to all the same pricing for resorts as the online booking sites do and we can price-match online booking engine pricing when comparing apples to apples. 
+              In many cases, we can find discounts and other promotional offerings that are not offered to the general public.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
+              What important information should I have thought through before contacting you out?
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              Ideally you should set a budget and share it with us, so that we can give you a realistic, fun, and memorable itinerary for a price you are comfortable with.
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="c-reviews">
 
   </section>
-  
+
+  <footer>
+
+    
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
