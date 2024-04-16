@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Meso Tours</title>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navId">
 
   <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -20,203 +21,256 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Packages</a>
+            <a class="nav-link" href="#packages" aria-current="page">Packages</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">FAQ</a>
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reviews">Reviews</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Book a tour</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col">
-                <div class="form-floating">
-                  <input type="email" placeholder="Email address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <label for="exampleInputEmail1">Email</label>
+  <main>
+    <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Book a tour</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <div class="form-floating">
+                    <input type="email" placeholder="Email address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1">Email</label>
+                  </div>
+                  
                 </div>
-                
-              </div>
-              <div class="col">
-                <div class="form-floating">
-                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Madrid</option>
-                    <option value="1">Amsterdam</option>
-                    <option disabled value="2">Rome (fully booked)</option>
-                  </select>
-                  <label for="floatingSelect">Choose a tour</label>
+                <div class="col">
+                  <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Madrid</option>
+                      <option value="1">Amsterdam</option>
+                      <option disabled value="2">Rome (fully booked)</option>
+                    </select>
+                    <label for="floatingSelect">Choose a tour</label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Checkout</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active c-item">
-        <img src="./img/slide-1.avif" class="d-block w-100" alt="Road trip">
-        <div class="carousel-caption d-none d-md-block top-0 mt-5">
-          <p>Join the adventure</p>
-          <h1>Meso Tours</h1>
-          <button type="button" class="btn btn-primary py-2 px-4 m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a tour</button>
-        </div>
-      </div>
-      <div class="carousel-item c-item">
-        <img src="./img/slide-2.avif" class="d-block w-100" alt="Lake and forest">
-        <div class="carousel-caption d-none d-md-block top-0 mt-5">
-          <p>Time for a holiday</p>
-          <h1>3 available tours</h1>
-          <button type="button" class="btn btn-primary py-2 px-4 m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a tour</button>
-        </div>
-      </div>
-      <div class="carousel-item c-item">
-        <img src="./img/slide-3.avif" class="d-block w-100" alt="Coast">
-        <div class="carousel-caption d-none d-md-block top-0 mt-5">
-          <p>Enjoy sunny beaches</p>
-          <h1>Sandy beaches</h1>
-          <button type="button" class="btn btn-primary py-2 px-4 m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a tour</button>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </section>
-
-  <section class="overview container-fluid mb-5 py-5">
-    <div class="row">
-      <div class="col text-center">
-        <p><i class="bi bi-airplane-fill me-2"></i>3 amazing destinations</p>
-      </div>
-      <div class="col text-center">
-        <p><i class="bi bi-credit-card-fill me-2"></i>Choose between deposit options</p>
-      </div>
-      <div class="col text-center">
-        <p><i class="bi bi-award-fill me-2"></i>Thousands of customers</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="c-cards-container mb-5">
-    <div class="container">
-      <h3 class="text-center mb-5">Packages</h3>
-      <div class="row text-center">
-        <div class="col">
-          <div class="card" >
-            <img src="./img/madrid.jpg" class="card-img-top" alt="View of Madrid">
-            <div class="card-body">
-              <h5 class="card-title">Madrid</h5>
-              <p class="card-text">Madrid has excellent art museums, phenomenal food, enormous parks and Europe’s largest palace, but its inclusive atmosphere is what really makes the city soar.</p>
-              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book this tour</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" >
-            <img src="./img/Overview-Amsterdam.webp" class="card-img-top" alt="Bicycles on a bridge in Amsterdam">
-            <div class="card-body">
-              <h5 class="card-title">Amsterdam</h5>
-              <p class="card-text">Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's treasure-packed museums, vintage-filled shops and hyper-creative drinking, dining and design scenes.</p>
-              <a href="#" class="btn btn-primary position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Book this tour <span class="position-absolute top-0 start-100 translate-middle badge text-bg-secondary">New</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" >
-            <img src="./img/roma.webp" class="card-img-top" alt="Rome Colosseum">
-            <div class="card-body">
-              <h5 class="card-title">Rome</h5>
-              <p class="card-text">A heady mix of haunting ruins, awe-inspiring art and vibrant street life, Italy's hot-blooded capital is one of the world's most romantic and charismatic cities.</p>
-              <button type="button" class="btn btn-primary position-relative" id="liveAlertBtn">Book this tour <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger">Full</span></button>
-            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Checkout</button>
           </div>
         </div>
       </div>
-    </div>
-    <div id="liveAlertPlaceholder"></div>
-  </section>
+    </section>
   
-  <section class="c-faq">
-    <div class="container">
-      <h3 class="text-center mb-5">FAQ</h3>
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Do I have to pay you upfront for my vacation?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              No! The deposit requirements are set by the resorts and the tour operators we book through. Deposit rates vary based on the resort or package you select, and the time you are traveling.  
-            </div>
+    <section id="carouselHero" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="./img/slide-1.jpg" class="d-block w-100" alt="Venice">
+          <div class="carousel-caption d-none d-md-block top-0 mt-5">
+            <h5>Join the adventure</h5>
+            <h1>Meso Tours</h1>
+            <button type="button" class="btn btn-primary py-2 px-4 m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a tour</button>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Will I pay more for vacation if I book through you than an online booking site?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              No. We have access to all the same pricing for resorts as the online booking sites do and we can price-match online booking engine pricing when comparing apples to apples. 
-              In many cases, we can find discounts and other promotional offerings that are not offered to the general public.
-            </div>
+        <div class="carousel-item c-item">
+          <img src="./img/slide-2.cms" class="d-block w-100" alt="City with a bridge over the river">
+          <div class="carousel-caption d-none d-md-block top-0 mt-5">
+            <h5>Time for a holiday!</h5>
+            <h1>3 available tours</h1>
+            <button type="button" class="btn btn-primary py-2 px-4 m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a tour</button>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              What important information should I have thought through before contacting you out?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Ideally you should set a budget and share it with us, so that we can give you a realistic, fun, and memorable itinerary for a price you are comfortable with.
+        <div class="carousel-item c-item">
+          <img src="./img/slide-3.jpg" class="d-block w-100" alt="Orange car in a paved street">
+          <div class="carousel-caption d-none d-md-block top-0 mt-5">
+            <h5>Explore Europe</h5>
+            <h1>With the best tour guides!</h1>
+            <button type="button" class="btn btn-primary py-2 px-4 m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Book a tour</button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </section>
+  
+    <section class="overview container-fluid mb-5 py-5">
+      <div class="row">
+        <div class="col text-center">
+          <p><i class="bi bi-airplane-fill me-2"></i>3 amazing destinations</p>
+        </div>
+        <div class="col text-center">
+          <p><i class="bi bi-credit-card-fill me-2"></i>Choose between deposit options</p>
+        </div>
+        <div class="col text-center">
+          <p><i class="bi bi-award-fill me-2"></i>Thousands of customers</p>
+        </div>
+      </div>
+    </section>
+  
+    <section id="packages" class="c-cards-container mb-5">
+      <div class="container">
+        <h3 class="text-center mb-5">Packages</h3>
+        <div class="row text-center">
+          <div class="col-md">
+            <div class="card" >
+              <img src="./img/madrid.jpg" class="card-img-top" alt="View of Madrid">
+              <div class="card-body">
+                <h5 class="card-title">Madrid - £299</h5>
+                <p class="card-text">Madrid has excellent art museums, phenomenal food, enormous parks and Europe’s largest palace, but its inclusive atmosphere is what really makes the city soar.</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book this tour</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card" >
+              <img src="./img/Overview-Amsterdam.webp" class="card-img-top" alt="Bicycles on a bridge in Amsterdam">
+              <div class="card-body">
+                <h5 class="card-title">Amsterdam - £349</h5>
+                <p class="card-text">Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's treasure-packed museums, vintage-filled shops and hyper-creative drinking, dining and design scenes.</p>
+                <a href="#" class="btn btn-primary position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Book this tour <span class="position-absolute top-0 start-100 translate-middle badge text-bg-secondary">New</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card" >
+              <img src="./img/roma.webp" class="card-img-top" alt="Rome Colosseum">
+              <div class="card-body">
+                <h5 class="card-title">Rome - £399</h5>
+                <p class="card-text">A heady mix of haunting ruins, awe-inspiring art and vibrant street life, Italy's hot-blooded capital is one of the world's most romantic and charismatic cities.</p>
+                <button type="button" class="btn btn-primary position-relative" id="liveAlertBtn">Book this tour <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger">Full</span></button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="c-reviews">
-
-  </section>
-
-  <footer>
-
+      <div id="liveAlertPlaceholder"></div>
+    </section>
     
+    <section class="c-faq mb-5" id="faq">
+      <div class="container">
+        <h3 class="text-center mb-5">FAQ</h3>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Do I have to pay you upfront for my vacation?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                No! The deposit requirements are set by the resorts and the tour operators we book through. Deposit rates vary based on the resort or package you select, and the time you are traveling.  
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Will I pay more for vacation if I book through you than an online booking site?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                No. We have access to all the same pricing for resorts as the online booking sites do and we can price-match online booking engine pricing when comparing apples to apples. 
+                In many cases, we can find discounts and other promotional offerings that are not offered to the general public.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                What important information should I have thought through before contacting you out?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Ideally you should set a budget and share it with us, so that we can give you a realistic, fun, and memorable itinerary for a price you are comfortable with.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="c-reviews" id="reviews">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <div id="carouselReviews" class="carousel slide c-carousel-reviews p-3" data-bs-theme="dark">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./img/customer-1.jpg" class="d-block w-20 rounded-circle mx-auto mb-3" alt="Customer">
+                  <div class="d-block w-75 mx-auto fst-italic text-center">
+                    <p class="fw-bold">Amanda L.</p>
+                    <p>“We have used Meso Tours for the last 3 years always had excellent service every time. Would highly recommended.”</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/customer-2.jpg" class="d-block w-20 rounded-circle mx-auto mb-3" alt="Customer">
+                  <div class="d-block w-75 mx-auto fst-italic text-center">
+                    <p class="fw-bold">James M.</p>
+                    <p>“I would like to say thank you for a fantastic holiday, because of you we had a lovely time. Everything you organised went according to plan.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/customer-3.jpg" class="d-block w-20 rounded-circle mx-auto mb-3" alt="Customer">
+                  <div class="d-block w-75 mx-auto fst-italic text-center">
+                    <p class="fw-bold">Josh P.</p>
+                    <p>“Fantastic service, from booking to transfers. All arrangements went smoothly and the service from Meso Tours was excellent...thank you for arranging such a great holiday for me!”</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/customer-4.jpg" class="d-block w-20 rounded-circle mx-auto mb-3" alt="Customer">
+                  <div class="d-block w-75 mx-auto fst-italic text-center">
+                    <p class="fw-bold">Sylvia U.</p>
+                    <p>“Couldn't have asked for better service, nothing too much trouble. I have booked with Meso Tours since 2018 and wouldn't use anyone else when booking a holiday.”</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselReviews" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselReviews" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <h4>Meso Tours</h4>
+      <small>For the latest travel advice including security and local laws, plus passport and visa information, check the <a href="https://www.gov.uk/foreign-travel-advice" target="_blank">Foreign Travel Advice</a>.</small>
+    </div>
+
   </footer>
   <script src="script.js"></script>
 </body>
